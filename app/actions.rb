@@ -60,10 +60,9 @@ get '/logout' do
   redirect(to('/login'))
 end
 
-
-
-
-
+get '/moods' do
+  erb(:'/moods/index')
+end
 
 
 

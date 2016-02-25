@@ -1,6 +1,6 @@
 class Mood < ActiveRecord::Base
   belongs_to :user
-  has_many :podcasts
+  has_many :playlists
 
   validates :title, presence: true, length: {maximum: 40}
 

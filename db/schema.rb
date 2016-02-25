@@ -45,9 +45,9 @@ ActiveRecord::Schema.define(version: 20160225162553) do
     t.string   "name"
     t.string   "email"
     t.string   "password"
-    t.datetime "created_at",                                       null: false
-    t.datetime "updated_at",                                       null: false
-    t.string   "image",      default: "/public/images/avatar.png"
+    t.datetime "created_at",                                null: false
+    t.datetime "updated_at",                                null: false
+    t.string   "image",      default: "/images/avatar.png"
   end
 
 end

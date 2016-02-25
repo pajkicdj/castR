@@ -89,7 +89,19 @@ get '/profile' do
   erb :'/users/profile'
 end
 
-
+post '/users/upload_image' do
+  #[:filename] is a default key of the name of the file
+  @filename = params[:file_data][:filename]
+  #[:tempfile] is a default key for the temporary path of the file in the browser
+  file = params[:file_data][:tempfile]
+  File.open("./public/images/#{@filename}", 'wb') do |f|
+    f.write(file.read)
+  end
+  user = current_user
+  user.image = @filename
+  user.save
+  redirect "/profile"
+end
 
 
 

@@ -12,9 +12,11 @@
         <h5>WE'RE HERE TO HELP!</h5>
         <em>castR</em> allows you to select a range of podcasts for you based on the mood you're in at the time.
       </p>
-      <p>
-        <a href="/get_started"><em>Get Started!</em></a>
-      </p>
+      <% unless current_user %>
+        <p>
+          <a href="/get_started"><em>Get Started!</em></a>
+        </p>
+      <% end %>
     </div>
 
 

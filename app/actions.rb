@@ -80,6 +80,10 @@ get '/moods/:id' do
   erb :'moods/moodpage'
 end
 
+get '/profile' do
+  erb :'users/profile'
+end
+
 
 
 

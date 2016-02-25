@@ -1,0 +1,9 @@
+<div class="column">
+  <div class="thumbnail">
+    <h5>Hello <%= current_user.name%></h5>
+    <img class="thumbnail" src="<%= current_user.image%>">
+  </div>
+</div>
+
+<% @liked_playlists = Playlist.select {|list| list.liked_by?(current_user)}%>
+

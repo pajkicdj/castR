@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224212400) do
+ActiveRecord::Schema.define(version: 20160225162553) do
 
   create_table "likes", force: :cascade do |t|
     t.integer  "user_id"
@@ -45,8 +45,9 @@ ActiveRecord::Schema.define(version: 20160224212400) do
     t.string   "name"
     t.string   "email"
     t.string   "password"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                                       null: false
+    t.datetime "updated_at",                                       null: false
+    t.string   "image",      default: "/public/images/avatar.png"
   end
 
 end

@@ -9,18 +9,32 @@
   height: 100%;
   margin: 0;
   background-image: url(../images/roadrocks.jpg);
+  padding-top: 100px;
+  text-align: center;
+}
+
+.container_main > h1 {
+  display: inline;
+  background-color:rgba(255, 255, 255, 0.7);
+  border-radius: 10px;
+  margin: 10px;
+  padding: 5px;
 }
 
 .about_content {
-  width: 300px;
-  height: 400px;
-  margin: 0 auto;
+  width: 400px;
+  height: 320px;
+  margin: 50px auto;
   padding: 10px;
   border-radius: 20px;
-  background-color: #eee;
   background-color:rgba(255, 255, 255, 0.7);
+  text-align: left;
 }
 
-.about_content > h3 {
+.about_content a {
+  float: right;
+}
+
+.about_content h3 {
   text-align: center;
 }

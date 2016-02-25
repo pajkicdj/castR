@@ -1,8 +1,13 @@
 <div class="column">
   <div class="thumbnail">
     <h5>Hello, <em><%= current_user.name%></em></h5>
-    <img class="thumbnail" src="<%= current_user.image%>">
+    <img class="thumbnail" src="/images/<%= current_user.image%>">
   </div>
+
+  <form action="/users/upload_image" method="POST" enctype="multipart/form-data">
+    <input type="file" name="file_data">
+    <input type="submit" value="Upload image">
+  </form>
 </div>
 
 <% @liked_casts = Podcast.all.select {|cast| cast.likes.find_by(user_id: current_user.id) != nil}%>
@@ -14,7 +19,7 @@
     <div class="column">
       <h5><%=liked.title%></h5>
       <a href="">
-        <img class="thumbnail" src="http://placehold.it/300x400">
+        <img class="thumbnail" src="../../../public/images/avatar.png">
       </a>
     </div>
   <% end %>

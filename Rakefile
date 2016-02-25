@@ -4,6 +4,8 @@ require ::File.expand_path('../config/environment', __FILE__)
 
 Rake::Task["db:create"].clear
 Rake::Task["db:drop"].clear
+Rake::Task["db:reset"].clear
+Rake::Task['db:seed'].clear
 
 # NOTE: Assumes SQLite3 DB
 desc "create the database"
@@ -19,4 +21,16 @@ end
 desc 'Retrieves the current schema version number'
 task "db:version" do
   puts "Current version: #{ActiveRecord::Migrator.current_version}"
+end
+
+
+desc "reset the database"
+task "db:reset" do
+  rm_f 'db/db.sqlite3'
+  touch 'db/db.sqlite3'
+end
+
+desc "seed the database"
+task "db:seed" do
+ require './db/seeds.rb'
 end

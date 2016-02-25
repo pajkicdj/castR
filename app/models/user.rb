@@ -6,11 +6,11 @@ class User < ActiveRecord::Base
   
   attr_accessor :password_confirmation
   
-  #validate :check_password
+  validate :check_password
 
   def check_password
     if password != password_confirmation
-      errors.add(:password, "Your passwords do not match")
+      errors.add(:password, ": Your passwords do not match")
     end
   end
 end

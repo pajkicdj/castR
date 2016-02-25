@@ -1,10 +1,15 @@
 <h2>Signup</h2>
 
-<ul class="errors">
-    <% @user.errors.full_messages.each do |message| %>
-       <li><%= message %></li>
+<div class="errors">
+    <% if @user.errors.any? %>
+        <p> Your sign up form contains the following errors: </p>
+        <ol>
+            <% @user.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+        </ol>
     <% end %>
-</ul>
+</div>
 
 
 <form method="POST" action="/validate_signup"> <!-- method="POST" means it will send a POST request and the/signup sends the request to "/signup"-->

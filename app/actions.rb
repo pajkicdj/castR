@@ -61,8 +61,25 @@ get '/logout' do
 end
 
 get '/moods' do
+  @moods = Mood.all
   erb(:'/moods/index')
 end
+
+
+get '/get_started' do
+  if current_user
+    redirect(to('/moods'))
+    # erb(:'/moods/index')
+  else
+    erb(:login)
+  end
+end
+
+get '/moods/:id' do
+  @mood = Mood.find(params[:id])
+  erb :'moods/moodpage'
+end
+
 
 
 

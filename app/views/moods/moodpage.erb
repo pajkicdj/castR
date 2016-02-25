@@ -1,1 +1,11 @@
 <%= erb(:'moods/moods_bar', { locals: { mood: @mood}}) %>
+
+<div class="featured_playlists">
+  <div class="row large-up-2 text-center">
+    <div class="column">
+    <% @mood.playlists.each do |playlist| %>
+      <%= erb(:'moods/playlists', {locals: {mood: @mood, playlist: playlist}}) %>
+    <% end %>
+    </div>
+  </div>
+</div>

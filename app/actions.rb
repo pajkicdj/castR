@@ -80,7 +80,10 @@ get '/moods/:id' do
   erb :'moods/moodpage'
 end
 
-
+get '/moods/:mood_id/:id' do
+  @playlist = Playlist.find(params[:id])
+  erb :'moods/playlistpage'
+end
 
 
 

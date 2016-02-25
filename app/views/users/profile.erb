@@ -1,0 +1,21 @@
+<div class="column">
+  <div class="thumbnail">
+    <h5>Hello, <em><%= current_user.name%></em></h5>
+    <img class="thumbnail" src="<%= current_user.image%>">
+  </div>
+</div>
+
+<% @liked_casts = Podcast.all.select {|cast| cast.likes.find_by(user_id: current_user.id) != nil}%>
+
+<div class="row large-up-<%= @liked_casts.length%> text-center">
+<h1>Liked Podcasts:</h1>
+<hr>
+  <% @liked_casts.each do |liked|%>
+    <div class="column">
+      <h5><%=liked.title%></h5>
+      <a href="">
+        <img class="thumbnail" src="http://placehold.it/300x400">
+      </a>
+    </div>
+  <% end %>
+</div>

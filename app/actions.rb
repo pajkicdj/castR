@@ -80,16 +80,34 @@ get '/moods/:id' do
   erb :'moods/moodpage'
 end
 
-get '/moods/:mood_id/:id' do
+# get '/moods/:mood_id/:id/podcasts.first.id' do
+#   @playlist = Playlist.find(params[:id])
+#   erb :'moods/playlistpage'
+# end
+
+
+#et '/moods/:mood_id/:id/podcasts.first.id' do
+
+get '/playlists/:id' do
   @playlist = Playlist.find(params[:id])
+  #@podcast = Podcast.find(@playlist.first.id)
   erb :'moods/playlistpage'
 end
 
+# get '/moods/:mood_id/:id' do
+#   @playlist = Playlist.find(params[:id])
+#   #@podcast = Podcast.find(@playlist.first.id)
+#   erb :'moods/playlistpage'
+# end
 
 
 
-
-
+get '/playlists/:playlist_id/:id' do
+  @podcast = Podcast.find(params[:id])
+  @playlist1 = Playlist.find(params[:playlist_id]) 
+  #@podcast = Podcast.find(@playlist.first.id)
+  erb :'moods/podcastpage'
+end
 
 
 

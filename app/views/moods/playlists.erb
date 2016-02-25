@@ -1,4 +1,6 @@
-<a href="/moods/<%= playlist.mood_id %>/<%= playlist.id %>">
-   <h5>playlist.title</h5>
+<a href="/playlists/<%= playlist.id %>/ <%= playlist.podcasts.first.id %>">
+  <h5><%= playlist.title %></h5>
   <img class="thumbnail" src="http://placehold.it/300x400">
 </a>
+
+

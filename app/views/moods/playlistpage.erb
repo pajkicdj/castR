@@ -1,1 +1,17 @@
 <%= erb(:'moods/playlists', { locals: { playlist: @playlist}}) %>
+
+<div class="featured_playlists">
+  <div class="row large-up-2 text-center">
+    <div class="column">
+    <% @playlist.podcasts.each do |podcast| %>
+      <li>
+        <%= erb(:'moods/podcasts', {locals: {podcast: podcast}}) %>
+      </li>
+    <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+

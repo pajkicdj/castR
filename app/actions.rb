@@ -85,6 +85,10 @@ get '/moods/:mood_id/:id' do
   erb :'moods/playlistpage'
 end
 
+get '/profile' do
+  erb :'/users/profile'
+end
+
 
 
 

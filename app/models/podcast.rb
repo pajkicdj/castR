@@ -2,7 +2,7 @@ class Podcast < ActiveRecord::Base
   belongs_to :playlist
   has_many :likes
 
-  validates :title, presence: true, length: {maximum: 40}
+  validates :title, presence: true, length: {maximum: 200}
   validates :url, presence: true, length: {maximum: 2000}
 
   def like_count

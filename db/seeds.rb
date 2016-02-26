@@ -37,7 +37,7 @@ pop_culture = Mood.create(
 
 #########################################
 
-title = Comedy Bang! Bang!
+title = "Comedy Bang! Bang!"
 comedy.playlists.create!(
   title: title,
 )

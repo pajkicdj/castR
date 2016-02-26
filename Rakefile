@@ -32,5 +32,5 @@ end
 
 desc "seed the database"
 task "db:seed" do
- require './db/seeds.rb'
+ require './db/fake_data.rb'
 end

@@ -122,6 +122,19 @@ get '/playlists/:playlist_id/:id' do
 end
 
 
+post '/likes' do
+  music_id = params[:podcast_id]
+  like = Like.new(podcast_id: music_id, user_id: current_user.id)
+  like.save
+  redirect(back)
+end
+
+delete '/likes/:id' do
+  like = Like.find(params[:id])
+  like.destroy
+  redirect(back)
+end
+
 
 
 

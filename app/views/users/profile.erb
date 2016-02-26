@@ -1,7 +1,6 @@
 <div class="column">
   <div class="thumbnail">
     <h5>Hello, <em><%= current_user.name%></em></h5>
-    <img class="thumbnail" src="<%=current_user.image%>">
     <img class="thumbnail" src="/images/<%= current_user.image%>">
   </div>
 
@@ -19,8 +18,7 @@
   <% @liked_casts.each do |liked|%>
     <div class="column">
       <h5><%=liked.title%></h5>
-      <a href="">
-        <img class="thumbnail" src="../../../public/images/avatar.png">
+      <a href="/playlists/<%= liked.playlist_id %>/<%= liked.id%>">        <img class="thumbnail" src="../../../public/images/avatar.png">
       </a>
     </div>
   <% end %>
@@ -34,7 +32,7 @@
   <% @liked_lists.each do |liked|%>
     <div class="column">
       <h5><%=liked.title%></h5>
-      <a href="">
+      <a href="/playlists/<%= liked.id %>">
         <img class="thumbnail" src="http://placehold.it/300x400">
       </a>
     </div>

@@ -37,11 +37,12 @@ pop_culture = Mood.create(
 
 #########################################
 
-title = Comedy Bang! Bang!
-comedy.playlists.create!(
-  title: title,
-)
-
+3.times do
+  title = Faker::Name.title
+  comedy.playlists.create!(
+    title: title,
+  )
+end
 
 3.times do
   title = Faker::Name.title

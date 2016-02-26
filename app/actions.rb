@@ -47,7 +47,7 @@ post '/validate_login' do
 
   if user && user.password == password
     session[:user_id] = user.id
-    redirect(to('/'))
+    redirect(to('/moods'))
   else
     @error_message = "Login failed."
     erb(:login)

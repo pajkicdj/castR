@@ -10,6 +10,7 @@
   margin: 0;
   background-image: url(../images/stars.jpg);
   /*padding-top: 100px;*/
+  padding-bottom: 10px;
   text-align: center;
   color: #fff;
 }
@@ -25,7 +26,7 @@
 .about_content {
   width: 400px;
   height: 320px;
-  margin: 50px auto;
+  margin: 0 auto;
   padding: 10px;
   /*border-radius: 20px;
   background-color:rgba(255, 255, 255, 0.7);*/
@@ -33,7 +34,43 @@
 }
 
 .about_content a {
+  color: #fff;
+}
+
+.about_content a:link {
   float: right;
+  padding: 10px;
+  background-color: #2199e8;
+  font-size: 14px;
+}
+
+.about_content a:hover {
+  opacity: .85;
+  transition: visibility 0s .25s, opacity .25s linear;
+}
+
+.nametilt {
+  font-family:impact;
+  color:#ff0000;
+  padding:2px;
+  border:dashed;
+  border-color:#ff0000;
+  position:relative;
+  -webkit-transform: rotate(20deg);
+}
+
+.profile_pic_holder {
+  border-radius: 50px;
+  width: 200px;
+  height: 200px;
+  overflow: none;
+  margin: 0 auto;
+  text-align: center;
+}
+.profile_pic_holder img {
+  border-radius: 100px;
+  overflow: none;
+  margin: 0 auto;
 }
 
 .main_img_container img {
@@ -52,6 +89,13 @@
 
 .about_content h3 {
   text-align: center;
+}
+
+.signup_organizer {
+  width: 250px;
+  height: 250px;
+  padding: 50px 0;
+  margin: 0 auto;
 }
 
 .featured_playlists .thumbnail {

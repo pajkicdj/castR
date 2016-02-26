@@ -2,16 +2,14 @@
     <% if like = current_user.likes.find_by({ podcast_id: podcast.id}) %>
         <form action="/likes/<%= like.id %>" method="POST">
             <input name="_method" type="hidden" value="delete">
-            <button class="button user-like" type="submit">
-                <%= podcast.like_count %>
-            </button>
+            <button class="button user-like" type="submit">Unlike</button>
+            <%= erb(:'moods/_likes_list', { locals: {podcast: @podcast}}) %>
         </form>
     <% else %>
         <form action="/likes" method="POST">
             <input type="hidden" name="podcast_id" value="<%= podcast.id %>">
-            <button class="button" type="submit">
-                <%= podcast.like_count %>
-            </button>
+            <button class="button" type="submit">Like</button>
+            <%= erb(:'moods/_likes_list', { locals: {podcast: @podcast}}) %>
         </form>
     <% end %>
 <% else %>

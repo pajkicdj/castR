@@ -39,6 +39,7 @@ pop_culture = Mood.create(
 #Comedy playlists
 
 
+
 cbb = comedy.playlists.create!(
   title: "Comedy Bang! Bang!",
   mood_id: comedy.id,

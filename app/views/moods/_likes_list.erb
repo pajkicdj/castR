@@ -1,0 +1,5 @@
+<% if podcast.likes.count == 0 %>
+  <h6><%= podcast.like_count %></h6>
+<% else %>
+  <a href="/likes/<%= podcast.id%>"><h6><%= podcast.like_count %></h6></a>
+<% end %>

@@ -135,6 +135,11 @@ delete '/likes/:id' do
   redirect(back)
 end
 
+get '/likes/:podcast_id' do
+  @podcast = Podcast.find_by(id: params[:podcast_id])
+  erb :'moods/likelist'
+end
+
 
 
 

@@ -1,0 +1,15 @@
+<div class="row large-<%= @podcast.likes.count%> text-center">
+<h1>Likes:</h1>
+<hr>
+  <% @users_who_liked = @podcast.likes.collect {|like| User.find_by(id: like.user_id)}%>
+
+  <div class="liked-users"
+    <% @users_who_liked.each do |user|%>
+      <div class="column">
+        <h5><%= user.name %></h5>
+        <a href="#"><img class="thumbnail" src="/images/<%= user.image%>">
+        </a>
+      </div>
+    <% end %>
+  </div>
+</div>

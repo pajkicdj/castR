@@ -3,7 +3,6 @@
     <h5>Hello, <em><%= current_user.name%></em></h5>
     <img class="thumbnail" src="/images/<%= current_user.image%>">
   </div>
-  </div>
 
   <form action="/users/upload_image" method="POST" enctype="multipart/form-data">
     <input type="file" name="file_data">
@@ -19,12 +18,7 @@
   <% @liked_casts.each do |liked|%>
     <div class="column">
       <h5><%=liked.title%></h5>
-<<<<<<< HEAD
-      <a href="">
-        <img class="thumbnail" src="/images/avatar.png">
-=======
       <a href="/playlists/<%= liked.playlist_id %>/<%= liked.id%>">        <img class="thumbnail" src="../../../public/images/avatar.png">
->>>>>>> a881de30948caef8214a0cc4101c2675c77ab5ae
       </a>
     </div>
   <% end %>

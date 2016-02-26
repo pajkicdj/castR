@@ -1,5 +1,5 @@
-<div class="profile_main">
-  <div class="column">
+ <div class="column">
+  <div class="profile_main">
     <div class="profile_pic_holder">
       <div class="thumbnail">
         <h5>Hello, <em><%= current_user.name%></em></h5>
@@ -8,41 +8,42 @@
 
     </div>
 
-    <div class="uploader_form_container">
-      <form action="/users/upload_image" method="POST" enctype="multipart/form-data">
-        <input type="file" name="file_data"><br>
-        <input type="submit" value="Upload image">
-      </form>
+    <div class="row large-up-3 text-center">
+      <div class="uploader_form_container">
+        <form action="/users/upload_image" method="POST" enctype="multipart/form-data">
+          <input type="file" name="file_data"><br>
+          <input type="submit" value="Upload image">
+        </form>
+      </div>
     </div>
-
-  </div>
 
   <% @liked_casts = Podcast.all.select {|cast| cast.likes.find_by(user_id: current_user.id) != nil}%>
 
-  <div class="row large-up-<%= @liked_casts.length%> text-center">
-  <h1>Liked Podcasts:</h1>
-  <hr>
-    <% @liked_casts.each do |liked|%>
-      <div class="column">
-        <h5><%=liked.title%></h5>
-        <a href="/playlists/<%= liked.playlist_id %>/<%= liked.id%>">        <img class="thumbnail" src="/images/avatar.png">
-        </a>
-      </div>
-    <% end %>
-  </div>
+    <div class="row large-up-<%= @liked_casts.length%> text-center">
+      <h1>Liked Podcasts:</h1>
+      <hr>
+      <% @liked_casts.each do |liked|%>
+        <div class="column">
+          <h5><%=liked.title%></h5>
+          <a href="/playlists/<%= liked.playlist_id %>/<%= liked.id%>">        <img class="thumbnail" src="/images/avatar.png">
+          </a>
+        </div>
+      <% end %>
+    </div>
 
   <% @liked_lists = @liked_casts.collect {|cast| cast.playlist_id}.uniq.collect {|list_id| Playlist.find_by(id: list_id)} %>
 
-  <div class="row large-up-<%= @liked_lists.length%> text-center">
-  <h1>Liked Playlists:</h1>
-  <hr>
-    <% @liked_lists.each do |liked|%>
-      <div class="column">
-        <h5><%=liked.title%></h5>
-        <a href="/playlists/<%= liked.id %>">
-          <img class="thumbnail" src="http://placehold.it/300x400">
-        </a>
-      </div>
-    <% end %>
+    <div class="row large-up-<%= @liked_lists.length%> text-center">
+      <h1>Liked Playlists:</h1>
+      <hr>
+      <% @liked_lists.each do |liked|%>
+        <div class="column">
+          <h5><%=liked.title%></h5>
+          <a href="/playlists/<%= liked.id %>">
+            <img class="thumbnail" src="http://placehold.it/300x400">
+          </a>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div> 

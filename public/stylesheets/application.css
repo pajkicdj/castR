@@ -1,3 +1,6 @@
+body {
+  background-color: #000;
+}
 #container {
   width: 100%;
   height: 100%;
@@ -21,17 +24,6 @@
   border-radius: 10px;
   margin: 10px;
   padding: 5px;*/
-}
-
-.profile_main {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-  background-image: url(../images/roadrocks.jpg);
-  /*padding-top: 100px;*/
-  padding-bottom: 10px;
-  text-align: center;
-  color: #fff;
 }
 
 .about_content {
@@ -70,8 +62,24 @@
   -webkit-transform: rotate(20deg);
 }
 
+.profile_main {
+  width: 100%;
+  height: 100%;
+  clear: both;
+  margin: 0;
+  background-image: url(../images/roadrocks.jpg);
+  background-repeat: repeat-x;
+  /*padding-top: 100px;*/
+  text-align: center;
+  color: #fff;
+}
+
+.column {
+  margin: 0;
+  padding: 0;
+}
+
 .profile_pic_holder {
-  border-radius: 50px;
   width: 200px;
   height: 200px;
   overflow: none;
@@ -80,6 +88,7 @@
 }
 .profile_pic_holder img {
   border-radius: 100px;
+  border: solid #fff;
   overflow: none;
   margin: 0 auto;
 }
@@ -130,5 +139,4 @@
   max-width: 250px;
   overflow: hidden;
   cursor: pointer;
-
 }

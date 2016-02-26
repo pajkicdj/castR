@@ -6,4 +6,24 @@
 
 <h5>Podcast: </h5>
 
+
 <%= erb(:'moods/podcasts', { locals: {podcast: @podcast}}) %>
+
+
+<audio controls autoplay>
+  <source src="<%= @podcast.url %>" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+<p> <%= erb(:'moods/likes', {locals: {podcast: @podcast}}) %></p>
+
+
+
+<% if @playlist1.podcasts.first.id == @podcast.id%>
+  <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i + 1 %>">Next</a>
+<% elsif @playlist1.podcasts.last.id == @podcast.id %>
+  <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i - 1 %>">Previous</a>
+<% else %>
+    <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i - 1 %>">Previous</a>
+    <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i + 1 %>">Next</a>
+<% end %>

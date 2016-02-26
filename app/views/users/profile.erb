@@ -19,8 +19,12 @@
   <% @liked_casts.each do |liked|%>
     <div class="column">
       <h5><%=liked.title%></h5>
+<<<<<<< HEAD
       <a href="">
         <img class="thumbnail" src="/images/avatar.png">
+=======
+      <a href="/playlists/<%= liked.playlist_id %>/<%= liked.id%>">        <img class="thumbnail" src="../../../public/images/avatar.png">
+>>>>>>> a881de30948caef8214a0cc4101c2675c77ab5ae
       </a>
     </div>
   <% end %>
@@ -34,7 +38,7 @@
   <% @liked_lists.each do |liked|%>
     <div class="column">
       <h5><%=liked.title%></h5>
-      <a href="">
+      <a href="/playlists/<%= liked.id %>">
         <img class="thumbnail" src="http://placehold.it/300x400">
       </a>
     </div>

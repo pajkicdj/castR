@@ -6,14 +6,6 @@
 <!--Sodajerker On Songwriting-->
 "http://traffic.libsyn.com/sodajerker/episode_83_scroobius_pip.mp3"
 
-<!--Stuff You Should Know-->
-"http://www.podtrac.com/pts/redirect.mp3/podcasts.howstuffworks.com/hsw/podcasts/sysk/2016-02-23-sysk-renewable-energy-final.mp3"
-
-<!--Stuff You Should Know-->
-"http://www.podtrac.com/pts/redirect.mp3/podcasts.howstuffworks.com/hsw/podcasts/sysk/2016-02-25-sysk-things-missing-without-trace-final.mp3"
-
-<!--Stuff You Should Know-->
-"http://www.podtrac.com/pts/redirect.mp3/podcasts.howstuffworks.com/hsw/podcasts/sysk/2016-02-25-sysk-things-missing-without-trace-final.mp3"
 
 <!--Little Atoms-->
 "http://rss.acast.com/littleatoms/littleatoms407-mariakonnikovaandtheconfidencegame/media.mp3"
@@ -95,6 +87,16 @@
 
 
 <!-- Education -->
+
+<!--Stuff You Should Know-->
+"http://www.podtrac.com/pts/redirect.mp3/podcasts.howstuffworks.com/hsw/podcasts/sysk/2016-02-23-sysk-renewable-energy-final.mp3"
+
+<!--Stuff You Should Know-->
+"http://www.podtrac.com/pts/redirect.mp3/podcasts.howstuffworks.com/hsw/podcasts/sysk/2016-02-25-sysk-things-missing-without-trace-final.mp3"
+
+<!--Stuff You Should Know-->
+"http://www.podtrac.com/pts/redirect.mp3/podcasts.howstuffworks.com/hsw/podcasts/sysk/2016-02-25-sysk-things-missing-without-trace-final.mp3"
+
 
 <!--The Paleo Solution-->
 "http://traffic.libsyn.com/robbwolf/PaleoSolution-309.mp3"

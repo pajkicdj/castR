@@ -1,8 +1,8 @@
 <div class="column">
   <div class="thumbnail">
     <h5>Hello, <em><%= current_user.name%></em></h5>
-    <img class="thumbnail" src="<%=current_user.image%>">
     <img class="thumbnail" src="/images/<%= current_user.image%>">
+  </div>
   </div>
 
   <form action="/users/upload_image" method="POST" enctype="multipart/form-data">
@@ -20,7 +20,7 @@
     <div class="column">
       <h5><%=liked.title%></h5>
       <a href="">
-        <img class="thumbnail" src="../../../public/images/avatar.png">
+        <img class="thumbnail" src="/images/avatar.png">
       </a>
     </div>
   <% end %>

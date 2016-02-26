@@ -23,6 +23,17 @@
   padding: 5px;*/
 }
 
+.profile_main {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  background-image: url(../images/roadrocks.jpg);
+  /*padding-top: 100px;*/
+  padding-bottom: 10px;
+  text-align: center;
+  color: #fff;
+}
+
 .about_content {
   width: 400px;
   height: 320px;
@@ -108,4 +119,16 @@
     width: auto; 
     max-width: 200px; 
     max-height: 200px;
+}
+
+.uploader_form_container {
+  float: right;
+}
+
+.uploader_form_container input {
+  display: inline-block;
+  max-width: 250px;
+  overflow: hidden;
+  cursor: pointer;
+
 }

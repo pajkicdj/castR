@@ -26,6 +26,9 @@ body {
   padding: 5px;*/
 }
 
+
+/*-----The following Selectors effect the Main Index*/
+
 .about_content {
   width: 400px;
   height: 320px;
@@ -74,6 +77,26 @@ body {
   color: #fff;
 }
 
+.uploader_form_container {
+  float: right;
+}
+
+.upload_button {
+  /*display: inline-block;
+  max-width: 250px;
+  overflow: hidden;
+  cursor: pointer;*/
+  padding: 10px;
+  background-color: #2199e8;
+  font-size: 14px;
+  border: none;
+}
+
+.upload_button:hover {
+  opacity: .85;
+  transition: visibility 0s .25s, opacity .25s linear;
+}
+
 .column {
   margin: 0;
   padding: 0;
@@ -101,6 +124,11 @@ body {
 .profile_pic_holder, .thumbnail:focus img {
   border: none;
   box-shadow: none;
+}
+
+.profile_liked_holderm, .column img {
+  max-width: 200px;
+  max-height: 200px;
 }
 
  .thumbnail:hover img {
@@ -143,26 +171,6 @@ body {
     width: auto; 
     max-width: 200px; 
     max-height: 200px;
-}
-
-.uploader_form_container {
-  float: right;
-}
-
-.upload_button {
-  /*display: inline-block;
-  max-width: 250px;
-  overflow: hidden;
-  cursor: pointer;*/
-  padding: 10px;
-  background-color: #2199e8;
-  font-size: 14px;
-  border: none;
-}
-
-.upload_button:hover {
-  opacity: .85;
-  transition: visibility 0s .25s, opacity .25s linear;
 }
 
 

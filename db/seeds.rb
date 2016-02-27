@@ -22,18 +22,23 @@ require 'faker'
 
 #########################################
 comedy = Mood.create(
-  title: 'Comedy'
+  title: 'Comedy',
+  image: "/images/comedy.png"
 )
 
 educational = Mood.create(
-  title: 'Educational')
+  title: 'Educational',
+  image: "/images/gradhat.ico")
 
 drama = Mood.create(
-  title: 'Drama'
+  title: 'Drama',
+  image: "/images/drama2.png"
 )
 
 pop_culture = Mood.create(
-  title: 'Pop Culture')
+  title: 'Pop Culture',
+  image: "/images/popcultn.png")
+
 
 #########################################
 #Comedy playlists

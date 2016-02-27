@@ -228,6 +228,7 @@ div.proftitled {
   border: solid #fff;
   overflow: none;
   margin: 0 auto;
+  box-shadow: 10px 10px 100px #A8A8A8, 0px 5px 15px #888888 !important;
 }
 
 .profile_pic_holder, .thumbnail img{
@@ -252,7 +253,11 @@ div.proftitled {
 
 .main_img_container img {
   border: none;
+  width: 230px;
+  padding-top: 40px;
 }
+
+
 
 .thumbnail {
   border: none;

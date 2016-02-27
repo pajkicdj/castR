@@ -1,8 +1,10 @@
 <div class="column">
   <div class="thumbnail">
-    <a href="/moods/<%= mood.id %>"><h5><%= mood.title %></h5>
+    <a href="/moods/<%= mood.id %>">
     <div class="mood_list_main">
-      <img class="thumbnail" src="<%= mood.image %>"></a>
+      <img class="mood_thumb" src="<%= mood.image %>">
+      <h4 class="moodtitle"><%= mood.title %></h4>
+      </a>
     </div>
   </div>
 </div>

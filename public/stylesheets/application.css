@@ -118,7 +118,6 @@ h2.fontw {
 }
 
 .indmood {
-  padding-right: 50px;
   display: inline-block;
 }
 
@@ -177,7 +176,7 @@ h2.fontw {
   padding: 50px;
   display: inline-block;
   margin: 25px;
-  padding-bottom: 30px;
+ /* padding-bottom: 30px;*/
 }
 
 .feat img {
@@ -190,6 +189,12 @@ h2.fontw {
   margin: 25px;
   float: left;
 }
+
+h4.moodtitle {
+  color: white;
+  text-shadow: 2px 2px 12px #fff;
+}
+
 
 
 .column {
@@ -253,10 +258,7 @@ div.all_likes {
   max-height: 200px;
 }
 
- .thumbnail:hover img {
-  border: solid #fff;
-  box-shadow: none;
-}
+
 
 .main_img_container img {
   border: none;
@@ -304,6 +306,19 @@ div.all_likes {
   max-width: 250px;
   overflow: hidden;
   cursor: pointer;
+}
+
+.mood_list_main {
+  background-color: rgba(7, 101, 138, 0.4);
+  box-shadow: 7px 7px 30px #FFFEFE, 0px 5px 15px #FFFFFF !important;
+  padding-right: 5px;
+  padding-left: 5px;
+  margin-right: 5px;
+}
+
+.mood_list_main img {
+  width:150px;
+  border: none;
 }
 
 

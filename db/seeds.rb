@@ -31,11 +31,11 @@ comedy = Mood.create(
 
 educational = Mood.create(
   title: 'Educational',
-  image: "/images/gradhat.ico")
+  image: "/images/gradhat.png")
 
 drama = Mood.create(
   title: 'Drama',
-  image: "/images/drama2.png"
+  image: "/images/drama.png"
 )
 
 pop_culture = Mood.create(

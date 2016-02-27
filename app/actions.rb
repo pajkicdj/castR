@@ -125,6 +125,14 @@ get '/playlists/:playlist_id/:id' do
   erb :'moods/podcastpage'
 end
 
+post '/playlists/:playlist_id/:id/play' do
+  @click = Click.new(podcast_id: params[:id],
+                     user_id: session[:user_id] 
+                    )
+  @click.save
+  redirect('/playlists/:playlist_id/:id/play')
+end
+
 
 post '/likes' do
   music_id = params[:podcast_id]
@@ -143,7 +151,6 @@ get '/likes/:podcast_id' do
   @podcast = Podcast.find_by(id: params[:podcast_id])
   erb :'moods/likelist'
 end
-
 
 
 

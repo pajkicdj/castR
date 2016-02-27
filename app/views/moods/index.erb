@@ -1,73 +1,49 @@
-<div class="column">
-  <div class="moods_main">
-    <div class="row column text-center">
-      <h2>Moods</h2>
-    </div>
+<div class="row column text-center">
+  <h2>Moods</h2>
+</div>
 
-    <div class="moods">
-      <div class="row small-up-2 medium-up-4 large-6 text-center">
-        <% @moods.each do |mood| %>
-          <div class="indmood">
-          <%= erb(:'moods/moods_bar', {locals: {mood: mood}}) %>
-          </div>
-        <% end %>
-      </div>  
-    </div>
+<div class="moods">
+  <div class="row small-up-2 medium-up-4 large-6 text-center">
+    <% @moods.each do |mood| %>
+      <%= erb(:'moods/moods_bar', {locals: {mood: mood}}) %>
+    <% end %>
+  </div>  
+</div>
 
-    <hr>
+<hr>
 
+<div class="row column text-center">
+  <h2>Featured Playlists</h2>
+</div>
 
- 
-  
-
-
-    <div class="row column text-center">
-      <h2 class="fontw">Featured Playlists</h2>
-    </div>
-
-    <div class="featured_playlists">
-      <div class="row large-up-2 text-center">
-        <div class="feat">
-          <div class="infeat">
-            <h5></h5>
-            <a href="/playlists/<%= @cbb.id %>">
-              <img class="thumbnail" src="<%= @cbb.image %>">
-            </a>
-          </div>  <!-- <div class="progress [small-# large-#] [secondary alert success] [radius round]">
-            <span class="meter" style="width: [1 - 100]%"></span>
-          </div> -->
-        </div>
-        <div class="feat">
-          <div class="infeat">
-            <h5></h5>
-            <a href="/playlists/<%= @sysk.id %>">
-            <img class="thumbnail" src="<%= @sysk.image %>">
-            </a>
-          </div>
-        </div>
-        <div class="feat">
-          <div class="infeat">
-            <h5></h5>
-            <a href="/playlists/<%= @sr.id %>">
-              <img class="thumbnail" src="<%= @sr.image %>">
-            </a>
-          </div>
-        </div>
-        <div class="feat">
-          <div class="infeat">
-            <h5></h5>
-            <a href="/playlists/<%= @sc.id %>">
-              <img class="thumbnail" src="<%= @sc.image %>">
-            </a>
-          </div>
-        </div>
+<div class="featured_playlists">
+  <div class="row large-up-2 text-center">
+    <div class="column">
+      <h5>FP1</h5>
+      <a href="">
+        <img class="thumbnail" src="http://placehold.it/300x400">
+      </a>
+      <div class="progress [small-# large-#] [secondary alert success] [radius round]">
+        <span class="meter" style="width: [1 - 100]%"></span>
       </div>
+    </div>
+    <div class="column">
+      <h5>FP2</h5>
+      <a href="">
+        <img class="thumbnail" src="http://placehold.it/300x400">
+      </a>
+    </div>
+    <div class="column">
+      <h5>FP3</h5>
+      <a href="">
+        <img class="thumbnail" src="http://placehold.it/300x400">
+      </a>
+    </div>
+    <div class="column">
+      <h5>FP4</h5>
+      <a href="">
+        <img class="thumbnail" src="http://placehold.it/300x400">
+      </a>
     </div>
   </div>
 </div>
-
-  
-
-
-
-

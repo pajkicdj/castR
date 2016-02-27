@@ -3,22 +3,19 @@
 <a href="/playlists/<%= @playlist1.id %>"><%= @playlist1.title %></a>
 
 
-
 <h5>Podcast: </h5>
 
 <img src="<%= @playlist1.image %>">
 
-
 <%= erb(:'moods/podcasts', { locals: {podcast: @podcast}}) %>
 
-
-<audio controls autoplay>
+<audio controls autoplay id="player">
   <source src="<%= @podcast.url %>" type="audio/mpeg">
 Your browser does not support the audio element.
 </audio>
 
-<p> <%= erb(:'moods/likes', {locals: {podcast: @podcast}}) %></p>
 
+<p> <%= erb(:'moods/likes', {locals: {podcast: @podcast}}) %></p>
 
 
 <% if @playlist1.podcasts.first.id == @podcast.id%>
@@ -29,3 +26,9 @@ Your browser does not support the audio element.
     <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i - 1 %>">Previous</a>
     <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i + 1 %>">Next</a>
 <% end %>
+
+<script type="text/javascript">
+  $('#player').on("play", function(){
+    $.post(window.location.pathname + "/play")
+  });
+</script>

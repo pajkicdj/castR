@@ -195,11 +195,17 @@ h4.moodtitle {
   text-shadow: 2px 2px 12px #fff;
 }
 
-
-
 .column {
   margin: 0;
   padding: 0;
+}
+
+.play_indv {
+  min-height: 200px;
+  width: 700px;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0.75);
+  padding: 50px;
 }
 
 .play_indv > h6,h4 {
@@ -366,4 +372,16 @@ div.all_likes {
 .podcastplayerpic img {
   width: auto;
   height: 200px;
+}
+
+.playlistpagemain {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 50px 10px 10px 10px;
+  background-image: url(../images/landscape1.jpg);
+}
+
+.playinfo {
+  list-style-type: none;
 }

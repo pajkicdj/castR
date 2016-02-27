@@ -249,7 +249,7 @@ div.all_likes {
 }
 
 
-.profile_pic_holder, .thumbnail img{
+/*.profile_pic_holder, .thumbnail img{
   border: solid #fff;
   box-shadow: none;
 }
@@ -262,7 +262,7 @@ div.all_likes {
 .profile_liked_holderm, .column img {
   max-width: 200px;
   max-height: 200px;
-}
+}*/
 
 
 
@@ -274,7 +274,7 @@ div.all_likes {
 
 
 
-.thumbnail {
+/*.thumbnail {
   border: none;
   box-shadow: none;
 }
@@ -282,7 +282,7 @@ div.all_likes {
 .thumbnail:focus, .thumbnail:hover {
   border: none;
   box-shadow: none;
-}
+}*/
 
 .about_content h3 {
   text-align: center;

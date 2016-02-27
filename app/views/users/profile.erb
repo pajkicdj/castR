@@ -1,10 +1,8 @@
  <div class="column">
   <div class="profile_main">
     <div class="profile_pic_holder">
-      <div class="thumbnail">
-        <h5>Hello, <em><%= current_user.name%></em></h5>
-        <img class="thumbnail" src="/images/<%= current_user.image%>">
-      </div>
+      <h5>Hello, <em><%= current_user.name%></em></h5>
+      <img class="thumbnail" src="/images/<%= current_user.image%>">
     </div>
 
     <div class="row large-up-3 text-center">
@@ -42,25 +40,26 @@
           </div>
         </div>
       </div>
-    </div>
+   
 
   <% @liked_lists = @liked_casts.collect {|cast| cast.playlist_id}.uniq.collect {|list_id| Playlist.find_by(id: list_id)} %>
 
-    <div class="row large-up-<%= @liked_lists.length%> text-center">
-      <div class="featured_playlists">
-        <h1>Liked Playlists</h1>
-        <hr>
-        <% @liked_lists.each do |liked|%>
-          <div class="feat">
-          
-          <a href="/playlists/<%= liked.id %>">
-            <img class="thumbnail" src="<%= liked.image %>">
-            <div class="proftitled">
-              <h5 class="proftitle"><%=liked.title%></h5>
-            </div>
-          </a>
-        </div>
-      <% end %>
+      <div class="row large-up-<%= @liked_lists.length%> text-center">
+        <div class="featured_playlists">
+          <h1>Liked Playlists</h1>
+          <hr>
+          <% @liked_lists.each do |liked|%>
+            <div class="feat">
+            
+            <a href="/playlists/<%= liked.id %>">
+              <img class="thumbnail" src="<%= liked.image %>">
+              <div class="proftitled">
+                <h5 class="proftitle"><%=liked.title%></h5>
+              </div>
+            </a>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 </div> 

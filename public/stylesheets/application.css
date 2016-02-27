@@ -30,6 +30,24 @@ h2 {
   text-shadow: 2px 2px 12px #AAB3AB;
 }
 
+h1.mood_title {
+    color: #FDFDFD;
+    text-shadow: 2px 2px 12px #fff;
+    background-color: rgba(63, 101, 130, 0.5);
+    border: solid white;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 70px;
+    font-size: 70px;
+}
+
+h2.fontw {
+  color: #fff;
+  text-shadow: 2px 2px 12px #040004;
+}
+
 .about_content {
   width: 400px;
   height: 320px;
@@ -87,6 +105,22 @@ h2 {
   width: 100%;
 }
 
+.moods_page {
+  width: 100%;
+  height: 100%;
+  clear: both;
+  margin: 0;
+  background-image: url(../images/hoodlookout.jpg);
+  background-repeat: repeat-x;
+  /*padding-top: 100px;*/
+  text-align: center;
+  color: #fff;
+}
+
+.moods {
+  padding-left: 150px;
+  padding-right: 150px;
+}
 
 
 .moods_main {
@@ -122,17 +156,35 @@ h2 {
   display: inline-block;
   margin: 25px;
 }
-.feat img {
 
+.feat img {
   margin-bottom: 0;
 }
 
+.feat_moods {
+  background-color: rgba(255,255,255,0.75);
+  padding: 50px;
+  margin: 25px;
+  float: left;
+}
 
 
 .column {
   margin: 0;
   padding: 0;
 }
+
+.play_indv > h6,h4 {
+  overflow: auto;
+  color: black;
+  padding-bottom: 15px;
+}
+
+.play_indv > img {
+  float:left;
+  padding-right: 15px;
+}
+
 
 .profile_pic_holder {
   width: 200px;
@@ -195,6 +247,7 @@ h2 {
   overflow: hidden;
   cursor: pointer;
 }
+
 
 
 @media only screen and (max-width: 710px) {

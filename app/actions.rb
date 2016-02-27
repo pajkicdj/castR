@@ -61,6 +61,10 @@ get '/logout' do
 end
 
 get '/moods' do
+  @cbb = Playlist.find(1)
+  @sysk = Playlist.find(12)
+  @sr = Playlist.find(9) 
+  @sc = Playlist.find(5)
   @moods = Mood.all
   erb(:'/moods/index')
 end

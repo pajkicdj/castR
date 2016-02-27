@@ -1,11 +1,32 @@
-<%= erb(:'moods/moods_bar', { locals: { mood: @mood}}) %>
+<div class="column">
+  <div class="moods_page">
+    <div class="moods">
+      <%= erb(:'moods/moods_main_bar', { locals: { mood: @mood}}) %>
+    <hr>
+    </div>
 
-<div class="featured_playlists">
-  <div class="row text-center">
-    <div class="column">
-      <% @mood.playlists.each do |playlist| %>
-        <%= erb(:'moods/playlists', {locals: {mood: @mood, playlist: playlist}}) %>
-      <% end %>
+
+    <div class="row column text-center">
+      <h2 class="fontw">Playlists</h2>
+    </div>
+
+    <div class="featured_playlists">
+      <div class="row large-up-2 text-center">
+        <% @mood.playlists.each do |playlist| %>
+          <div class="feat_moods">
+            <div class="infeat">
+              <%= erb(:'moods/playlists', {locals: {mood: @mood, playlist: playlist}}) %>
+            </div>
+          </div> 
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
+
+
+        
+
+
+
+

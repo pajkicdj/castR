@@ -2,7 +2,7 @@
   belongs_to :mood
   has_many :podcasts
 
-  validates :title, presence: true, length: {maximum: 40}
+  validates :title, presence: true, length: {maximum: 200}
 
   # def pod_count
   #   pod_num = self.podcasts.size

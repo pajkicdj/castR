@@ -11,14 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160227002523) do
-
-  create_table "clicks", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "podcast_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 20160226175137) do
 
   create_table "likes", force: :cascade do |t|
     t.integer  "user_id"
@@ -35,14 +28,17 @@ ActiveRecord::Schema.define(version: 20160227002523) do
 
   create_table "playlists", force: :cascade do |t|
     t.integer  "mood_id"
-    t.string   "title"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "title",       limit: 2000
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+    t.string   "image"
+    t.string   "link"
+    t.string   "description"
   end
 
   create_table "podcasts", force: :cascade do |t|
     t.integer  "playlist_id"
-    t.string   "title"
+    t.string   "title",       limit: 2000
     t.string   "url",         limit: 2000
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false

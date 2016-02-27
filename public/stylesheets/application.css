@@ -26,8 +26,28 @@ body {
   padding: 5px;*/
 }
 
-
 /*-----The following Selectors effect the Main Index*/
+h2 {
+  text-shadow: 2px 2px 12px #AAB3AB;
+}
+
+h1.mood_title {
+    color: #FDFDFD;
+    text-shadow: 2px 2px 12px #fff;
+    background-color: rgba(63, 101, 130, 0.5);
+    border: solid white;
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-top: 70px;
+    font-size: 70px;
+}
+
+h2.fontw {
+  color: #fff;
+  text-shadow: 2px 2px 12px #040004;
+}
 
 .about_content {
   width: 400px;
@@ -97,9 +117,103 @@ body {
   transition: visibility 0s .25s, opacity .25s linear;
 }
 
+.indmood {
+  padding-right: 50px;
+  display: inline-block;
+}
+
+.large-6 {
+  width: 100%;
+}
+
+
+.moods_page {
+  width: 100%;
+  height: 100%;
+  clear: both;
+  margin: 0;
+  background-image: url(../images/hoodlookout.jpg);
+  background-repeat: repeat-x;
+  /*padding-top: 100px;*/
+  text-align: center;
+  color: #fff;
+}
+
+.moods {
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+
+.moods_main {
+  width: 100%;
+  height: 100%;
+  clear: both;
+  margin: 0;
+  background-image: url(../images/evening-ride.jpg);
+  background-repeat: repeat-x;
+  /*padding-top: 100px;*/
+  text-align: center;
+  color: #fff;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+
+.moods_indv_main {
+  width: 100%;
+  height: 100%;
+  clear: both;
+  margin: 0;
+  background-image: url(../images/frostytips.jpg);
+  background-repeat: repeat-x;
+  /*padding-top: 100px;*/
+  text-align: center;
+  color: #fff;
+}
+
+.feat {
+  background-color: rgba(255,255,255,0.5);
+  padding: 50px;
+  display: inline-block;
+  margin: 25px;
+}
+
+.feat img {
+  margin-bottom: 0;
+}
+
+.feat_moods {
+  background-color: rgba(255,255,255,0.75);
+  padding: 50px;
+  margin: 25px;
+  float: left;
+}
+
+
 .column {
   margin: 0;
   padding: 0;
+}
+
+.play_indv > h6,h4 {
+  overflow: auto;
+  color: black;
+  padding-bottom: 15px;
+}
+
+.play_indv > img {
+  float:left;
+  padding-right: 15px;
+}
+
+h5.proftitle {
+  color: black;
+  padding-top: 15px;
+}
+
+div.proftitled {
+  width: 250px;
 }
 
 .profile_pic_holder {
@@ -173,7 +287,51 @@ body {
     max-height: 200px;
 }
 
+.uploader_form_container input {
+  display: inline-block;
+  max-width: 250px;
+  overflow: hidden;
+  cursor: pointer;
+}
 
+@media only screen and (max-width: 710px) {
+  .moods_main {
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+  .indmood {
+    padding-right: 20px;
+  }
+}
 
+.podcastplayermain {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding-top: 50px;
+  background-image: url(../images/stormysunset.jpg);
+}
 
+.podcastplayer {
+  width: 350px;
+  height: 500px;
+  border:solid thin #fff;
+  text-align: center;
+  border-radius: 10px;
+  margin: auto;
+  color: #fff;
+  background-color: #000;
+}
 
+.podcastplayerpic {
+  width: 100%;
+  height: 200px;
+  border-top: solid thin #fff;
+  border-bottom: solid thin #fff;
+  margin: 0;
+}
+
+.podcastplayerpic img {
+  width: auto;
+  height: 200px;
+}

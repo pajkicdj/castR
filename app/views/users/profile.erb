@@ -19,24 +19,27 @@
   <% @liked_casts = Podcast.all.select {|cast| cast.likes.find_by(user_id: current_user.id) != nil}%>
 
     
-    <div class="profile_liked_holder">
+    
       <div class="row large-up-<%= @liked_casts.length%> text-center">
         <div class="featured_playlists">
           <h1>Liked Podcasts</h1>
           <hr>
-
-          <% @liked_casts.each do |liked|%>
-            <div class="feat">
-              <%= liked_playlist = Playlist.find(liked.playlist_id) %>
-              
-              <a href="/playlists/<%= liked.playlist_id %>/<%= liked.id%>">
-                <img class="thumbnail" src="<%= liked_playlist.image%>">
-                <div class="proftitled">
-                  <h5 class="proftitle"><%=liked.title%></h5>
+          <div class="all_likes">
+            <% @liked_casts.each do |liked|%>
+              <div class="feat">
+                <div class="infeat">
+                  <%= liked_playlist = Playlist.find(liked.playlist_id) %>
+                
+                  <a href="/playlists/<%= liked.playlist_id %>/<%= liked.id%>">
+                    <img class="thumbnail" src="<%= liked_playlist.image%>">
+                  </a>
+                  <div class="proftitled">
+                    <h5 class="proftitle"><%=liked.title%></h5>
+                  </div>
                 </div>
-              </a>
-            </div>
-          <% end %>
+              </div>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>

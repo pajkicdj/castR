@@ -177,6 +177,7 @@ h2.fontw {
   padding: 50px;
   display: inline-block;
   margin: 25px;
+  padding-bottom: 30px;
 }
 
 .feat img {
@@ -210,10 +211,11 @@ h2.fontw {
 h5.proftitle {
   color: black;
   padding-top: 15px;
+
 }
 
-div.proftitled {
-  width: 250px;
+div.all_likes {
+  display: inline-block;
 }
 
 .profile_pic_holder {
@@ -230,6 +232,11 @@ div.proftitled {
   margin: 0 auto;
   box-shadow: 10px 10px 100px #A8A8A8, 0px 5px 15px #888888 !important;
 }
+
+.liked_wrapper {
+  max-width: 1100;
+}
+
 
 .profile_pic_holder, .thumbnail img{
   border: solid #fff;
@@ -299,6 +306,7 @@ div.proftitled {
   cursor: pointer;
 }
 
+
 @media only screen and (max-width: 710px) {
   .moods_main {
     padding-left: 20px;
@@ -308,6 +316,10 @@ div.proftitled {
     padding-right: 20px;
   }
 }
+
+.infeat {
+}
+
 
 .podcastplayermain {
   width: 100%;

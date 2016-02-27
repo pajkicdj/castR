@@ -5,18 +5,21 @@ require 'faker'
   name: "Djina",
   email: "djina@example.com",
   password: "password"
+  #image: "/images/djina.png"
 )
 
 @jake = User.create(
   name: "Jake",
   email: "jake@example.com",
   password: "password"
+  #image: "/images/jake.png"
 )
 
 @brendan = User.create(
   name: "Brandon",
   email: "brendan@example.com",
   password: "password"
+  #image: "/images/brandon.png"
 )
 
 

@@ -1,34 +1,41 @@
-<h5>Playlist:</h5>
+<div class="podcastplayermain">
+  <div class="podcastplayer">
+    <h5>Playlist:</h5>
 
-<a href="/playlists/<%= @playlist1.id %>"><%= @playlist1.title %></a>
+    <a href="/playlists/<%= @playlist1.id %>"><%= @playlist1.title %></a>
+
+    <div class="podcastplayerpic">
+      <img src="/images/podcastplayerpic.jpg" />
+    </div>
+
+    <h5>Podcast: </h5>
+
+    <img src="<%= @playlist1.image %>">
+
+    <%= erb(:'moods/podcasts', { locals: {podcast: @podcast}}) %>
+
+    <audio controls autoplay id="player">
+      <source src="<%= @podcast.url %>" type="audio/mpeg">
+    Your browser does not support the audio element.
+    </audio>
 
 
-<h5>Podcast: </h5>
-
-<img src="<%= @playlist1.image %>">
-
-<%= erb(:'moods/podcasts', { locals: {podcast: @podcast}}) %>
-
-<audio controls autoplay id="player">
-  <source src="<%= @podcast.url %>" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
+    <p> <%= erb(:'moods/likes', {locals: {podcast: @podcast}}) %></p>
 
 
-<p> <%= erb(:'moods/likes', {locals: {podcast: @podcast}}) %></p>
+    <% if @playlist1.podcasts.first.id == @podcast.id%>
+      <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i + 1 %>">Next</a>
+    <% elsif @playlist1.podcasts.last.id == @podcast.id %>
+      <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i - 1 %>">Previous</a>
+    <% else %>
+        <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i - 1 %>">Previous</a>
+        <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i + 1 %>">Next</a>
+    <% end %>
 
-
-<% if @playlist1.podcasts.first.id == @podcast.id%>
-  <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i + 1 %>">Next</a>
-<% elsif @playlist1.podcasts.last.id == @podcast.id %>
-  <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i - 1 %>">Previous</a>
-<% else %>
-    <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i - 1 %>">Previous</a>
-    <a href= "/playlists/<%= @playlist1.id %>/<%= @podcast.id.to_i + 1 %>">Next</a>
-<% end %>
-
-<script type="text/javascript">
-  $('#player').on("play", function(){
-    $.post(window.location.pathname + "/play")
-  });
-</script>
+    <script type="text/javascript">
+      $('#player').on("play", function(){
+        $.post(window.location.pathname + "/play")
+      });
+    </script>
+  </div>
+</div>

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :likes
+  has_many :clicks
   validates :name, presence: true, length: {maximum: 30}
   validates :email, presence: true, length: {maximum: 30}
   validates :password, presence: true, length: {minimum: 6}

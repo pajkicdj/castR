@@ -130,7 +130,7 @@ post '/playlists/:playlist_id/:id/play' do
                      user_id: session[:user_id] 
                     )
   @click.save
-  redirect('/playlists/:playlist_id/:id/play')
+  redirect(back)
 end
 
 

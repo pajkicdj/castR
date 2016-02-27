@@ -207,6 +207,14 @@ h2.fontw {
   padding-right: 15px;
 }
 
+h5.proftitle {
+  color: black;
+  padding-top: 15px;
+}
+
+div.proftitled {
+  width: 250px;
+}
 
 .profile_pic_holder {
   width: 200px;

@@ -18,17 +18,19 @@
     </div>
 
   <% @liked_casts = Podcast.all.select {|cast| cast.likes.find_by(user_id: current_user.id) != nil}%>
-
-    <div class="row large-up-<%= @liked_casts.length%> text-center">
-      <h1>Liked Podcasts:</h1>
-      <hr>
-      <% @liked_casts.each do |liked|%>
-        <div class="column">
-          <h5><%=liked.title%></h5>
-          <a href="/playlists/<%= liked.playlist_id %>/<%= liked.id%>">        <img class="thumbnail" src="/images/avatar.png">
-          </a>
-        </div>
-      <% end %>
+    
+    <div class="profile_liked_holder">
+      <div class="row large-up-<%= @liked_casts.length%> text-center">
+        <h1>Liked Podcasts:</h1>
+        <hr>
+        <% @liked_casts.each do |liked|%>
+          <div class="column">
+            <h5><%=liked.title%></h5>
+            <a href="/playlists/<%= liked.playlist_id %>/<%= liked.id%>">        <img class="thumbnail" src="/images/avatar.png">
+            </a>
+          </div>
+        <% end %>
+      </div>
     </div>
 
   <% @liked_lists = @liked_casts.collect {|cast| cast.playlist_id}.uniq.collect {|list_id| Playlist.find_by(id: list_id)} %>

@@ -71,7 +71,7 @@ get '/get_started' do
     redirect(to('/moods'))
     # erb(:'/moods/index')
   else
-    erb(:login)
+    redirect(to('/signup'))
   end
 end
 

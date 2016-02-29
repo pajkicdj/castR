@@ -25,10 +25,15 @@ post '/validate_signup' do
   @user.password = params[:password]
   @user.password_confirmation = params[:password_confirmation]
 
-  if @user.save
-    session[:user_id] = @user.id
-    redirect(to('/'))
+  if @user.password == @user.password_confirmation
+    if @user.save
+      session[:user_id] = @user.id
+      redirect(to('/'))
+    else
+      erb(:signup)
+    end
   else
+    @user.errors.add(:password, ": Your passwords do not match")
     erb(:signup)
   end
 end
@@ -103,7 +108,7 @@ get '/profile' do
   erb :'/users/profile'
 end
 
-post '/users/profile/upload_image' do
+post '/users/upload_image' do
   #[:filename] is a default key of the name of the file
   @filename = params[:file_data][:filename]
   #[:tempfile] is a default key for the temporary path of the file in the browser

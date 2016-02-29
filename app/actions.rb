@@ -103,7 +103,7 @@ get '/profile' do
   erb :'/users/profile'
 end
 
-post '/users/upload_image' do
+post '/users/profile/upload_image' do
   #[:filename] is a default key of the name of the file
   @filename = params[:file_data][:filename]
   #[:tempfile] is a default key for the temporary path of the file in the browser

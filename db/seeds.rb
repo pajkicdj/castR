@@ -1,26 +1,26 @@
 require 'faker'
 
 # Create main user
-@djina = User.create(
-  name: "Djina",
-  email: "djina@example.com",
-  password: "password"
-  #image: "/images/djina.png"
-)
+# @djina = User.create(
+#   name: "Djina",
+#   email: "djina@example.com",
+#   password: "password"
+#   #image: "/images/djina.png"
+# )
 
-@jake = User.create(
-  name: "Jake",
-  email: "jake@example.com",
-  password: "password"
-  #image: "/images/jake.png"
-)
+# @jake = User.create(
+#   name: "Jake",
+#   email: "jake@example.com",
+#   password: "password"
+#   #image: "/images/jake.png"
+# )
 
-@brendan = User.create(
-  name: "Brandon",
-  email: "brendan@example.com",
-  password: "password"
-  #image: "/images/brandon.png"
-)
+# @brendan = User.create(
+#   name: "Brandon",
+#   email: "brendan@example.com",
+#   password: "password"
+#   #image: "/images/brandon.png"
+# )
 
 
 #########################################
@@ -504,29 +504,29 @@ rl.podcasts.create!(
 
 
 ########################################
-3.times do
-  podcast_id = Faker::Number.between(1, 36)
-  @brendan.likes.create!(
-    user_id: @brendan.id,
-    podcast_id: podcast_id
-  )
-end
+# 3.times do
+#   podcast_id = Faker::Number.between(1, 36)
+#   @brendan.likes.create!(
+#     user_id: @brendan.id,
+#     podcast_id: podcast_id
+#   )
+# end
 
-3.times do
-  podcast_id = Faker::Number.between(1, 36)
-  @jake.likes.create!(
-    user_id: @jake.id,
-    podcast_id: podcast_id
-  )
-end
+# 3.times do
+#   podcast_id = Faker::Number.between(1, 36)
+#   @jake.likes.create!(
+#     user_id: @jake.id,
+#     podcast_id: podcast_id
+#   )
+# end
 
-3.times do
-  podcast_id = Faker::Number.between(1, 36)
-  @djina.likes.create!(
-    user_id: @djina.id,
-    podcast_id: podcast_id
-  )
-end
+# 3.times do
+#   podcast_id = Faker::Number.between(1, 36)
+#   @djina.likes.create!(
+#     user_id: @djina.id,
+#     podcast_id: podcast_id
+#   )
+# end
 
 
 

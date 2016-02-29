@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   
   attr_accessor :password_confirmation
   
-  #validate :check_password
+  validate :check_password
 
   def check_password
     if password != password_confirmation

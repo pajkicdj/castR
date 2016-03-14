@@ -10,10 +10,7 @@ configure do
       database: "db/db.sqlite3"
     }
   else
-    set :database, {
-      database: ENV['DATABASE_URL'],
-      adapter: "postgresql"
-    }
+    ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/mydb')
   end
 
   # Load all models from app/models, using autoload instead of require
